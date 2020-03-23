@@ -1,0 +1,13 @@
+<!--pages/text/text.wxml-->
+<!--基本使用-->
+<text>Hello World\n</text>
+<text>你好小程序\n</text>
+<!-- 2. selectable:true 默认不能选中 -->
+<!-- nbsp默认 ensp半个中文字符大小 emsp一个中文字符大小 -->
+<text selectable="{{true}}">master-lu\n</text>
+<text selectable space="nbsp">master lu\n</text>
+<text selectable space="ensp">master lu\n</text>
+<text selectable space="emsp">master lu\n</text>
+
+<!-- decode属性：是否解码 -->
+<text decode> 5 &gt; 3</text>
