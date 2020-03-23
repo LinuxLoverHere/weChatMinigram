@@ -1,0 +1,29 @@
+<!-- 1. input基本使用 -->
+<input></input>
+<!-- 2. value input中的默认值 -->
+<input value="hahah"></input>
+
+<!-- 3. type:决定弹出的软键盘类型 -->
+<input type="digit"></input>
+<input type="number"></input>
+<input type="idcard"></input>
+<input type="text"></input>
+
+
+<!-- 4. password：密文 -->
+<input password></input>
+
+<!-- 5. placeholder: 输入提示 -->
+<input placeholder="请输入文字"></input>
+<!-- 6. input绑定事件 -->
+<input bindinput="handleInput"
+       bindblur="handleBlur"
+       bindfocus="handleFocus"></input>
+
+
+
+
+
+
+
+
