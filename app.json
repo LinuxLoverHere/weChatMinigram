@@ -1,5 +1,33 @@
 {
   "pages": [
-    "pages/home/home"
-  ]
+    "pages/home/home",
+    "pages/about/about",
+    "pages/basicInformation/basicInformation"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "敏感信息检测",
+    "backgroundColor": "#00ff00",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "信息监测",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home_active.png"
+      },
+      {
+        "pagePath": "pages/basicInformation/basicInformation",
+        "text": "我的",
+        "iconPath": "assets/icons/mine.png",
+        "selectedIconPath": "assets/icons/mine_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap28.json"
 }
