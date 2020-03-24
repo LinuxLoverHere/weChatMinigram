@@ -1,0 +1,82 @@
+<!-- 1.wxml基本语法 -->
+<view></view>
+
+<!-- 2. mustache语法 -->
+<view>{{message}}</view>
+
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname+' '+lastname}}</view>
+<view>{{age >= 18 ? '成年人' : "未成年"}}</view>
+<view>{{nowTime}}</view>
+
+<button size="mini" bindtap="handleSwitchColor">切换颜色</button>
+<view class='box {{isActive?"active":""}}'>哈哈哈</view>
+<map class="map" longitude="116.11" latitude="39.6"></map>
+
+<view>--------条件判断--------</view>
+<button size="mini" bindtap="handleSwitchShow">切换显示</button>
+<!-- wx:if的使用 -->
+<view wx:if="{{isShow}}">哈哈哈</view>
+<!-- wx:elif wx:else -->
+<button size="mini" bindtap="handleIncreament">分数+6</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else="{{score <60> 90}}">不及格</view>
+
+<view>--------wx:if和hidden在隐藏组件时的区别</view>
+<!-- 
+区别：
+  hidden：将一个组件隐藏起来时，该组件依然存在
+  wx:if ：将一个组件隐藏起来时，这个组件压根儿不存在
+选择：
+  如果显示和隐藏的频率特别高，选择hidden
+  如果显示和隐藏的频率很低，选择使用wx:if
+ -->
+<view>-------------------------------</view>
+<view hidden="{{true}}">通过hidden控制显示内容</view>
+<view wx:if="{{false}}">通过wx:if控制显示的内容</view>
+
+
+<view>----------------------------------</view>
+<!-- 1. wx:for回顾 -->
+<!-- 1.1 遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['abc','cba','nba']}}">{{item}}</view> -->
+<!-- 2. block标签 -->
+<!-- <block wx:if="{{isShow}}">
+  <button>按钮</button>
+  <view>哈哈哈</view>
+  <text>我是内容</text>
+</block>
+<block wx:for="{{3}}">
+  <button>按钮</button>
+  <view>哈哈哈</view>
+  <text>我是内容</text>
+</block> -->
+<!-- 3. item index起别名 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+<block wx:for="{{nums}}" wx:for-item="rownums">
+  <block wx:for="{{rownums}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+<!-- 4、key的作用 -->
+<!-- <view wx:for="{{letters}}" wx:key="index">{{item}}</view> -->
+<view>----------template</view>
+<!-- 之前的小程序不支持自定义组件，为了代码复用：template -->
+<button>按钮</button>
+<view></view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
