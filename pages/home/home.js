@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter:0
+  },
+  handleIncrement(event){
+    console.log(event)
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+  handleTapClick(event){
+    console.log(event)
+  },
+  handleIncrementCpn(){
+    console.log("-----------")
+    const my_sel=this.selectComponent(".sel-class")
+    console.log(my_sel)
+    // my_sel.setData({
+    //   counter: my_sel.data.counter+20
+    // })
+    my_sel.incrementCounter(10)
+    
   },
 
   /**

@@ -1,4 +1,14 @@
 /* pages/home/home.wxss */
-.button01{
+.title{
   color: red;
+}
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color: blue;
 }

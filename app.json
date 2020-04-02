@@ -1,5 +1,9 @@
 {
   "pages": [
     "pages/home/home"
-  ]
+  ],
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  }
+  
 }

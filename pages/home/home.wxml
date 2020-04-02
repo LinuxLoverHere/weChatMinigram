@@ -1,3 +1,66 @@
 <!--pages/home/home.wxml-->
-<text>Hello World</text>
-<button size="mini" class="button01">按钮</button>
+<text class="title">Hello World</text>
+<button size="mini" class="title">按钮</button>
+<!-- 1.自定义组件的基本使用 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn/> -->
+
+<!-- 2.自定义组件的样式细节 -->
+<!-- <my-style></my-style> -->
+
+<!-- 3.给自定义组件传值 -->
+<my-prop title="哈哈哈" titleclass="red"/>
+<my-prop titleclass="green"/>
+<my-prop title="嘿嘿嘿" titleclass="blue"/>
+
+<!-- 4.组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment="handleIncrement"/>
+
+<!-- 5. tab-control练习 -->
+<w-tab-control titles="{{['衣服','裤子','鞋子']}}"
+               bind:itemclick="handleTapClick"/>
+
+<!-- 6.直接选中组件修改数据/调用方法 -->
+<button bind:tap="handleIncrementCpn">修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id" />
+
+
+<view>-------------------------------------</view>
+
+
+<!-- 7. 插槽的使用 -->
+<!-- 7.1 单个插槽使用 -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+<my-slot>
+<text>哈哈哈哈哈</text>
+</my-slot>
+<my-slot>
+<image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1585815614&di=c01caa80997ba333b5d0f1180834de03&src=http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"></image>
+</my-slot>
+<my-slot>
+<slider>这是一个进度条</slider>
+</my-slot>
+<!-- 7.2 多个插槽使用 -->
+<!-- 
+    注意事项：
+    1.给插头name属性，并在这里使用slot="slotname"
+    2.在components对象中添加一个选项：options->multipleSlots:true
+ -->
+<my-mslot>
+  <button slot="slot2">无法替换slot</button>
+  <slider slot="slot1">这是一个老进度条</slider>
+</my-mslot>
+
+
+
+
+
+
+
+
+
+
+
