@@ -1,0 +1,5 @@
+<!--pages/about/about.wxml-->
+<text>pages/about/about.wxml</text>
+<view>
+  <text>我是分享页面</text>
+</view>

@@ -1,66 +1,62 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  handleShowToast(){
+    wx.showToast({
+      title: '正在加载...',
+      duration:3000,
+      icon:'loading',
+      mask:true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowModal(){
+    wx.showModal({
+      title: '我是标题',
+      content: '我是内容，哈哈哈',
+      // showCancel:false,
+      cancelText:"Exit",
+      cancelColor:"red",
+      
+      success:function(res){
+        console.log(res)
+        if(res.cancel){
+          console.log("用户点击了取消")
+        }
+        if(res.confirm){
+          console.log("用户点击了确定")
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleShowLoading(){
+    wx.showLoading({
+      title: '加载ing',
+      mask:true
+    })
+    setTimeout(()=>{
+      // 必须手动hideLoading才会让Loading消失
+      wx.hideLoading()
+    },3000)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleShowAction(){
+    wx.showActionSheet({
+      itemList: ["相册","拍照"],
+      itemColor:"red",
+      success:function(res){
+        console.log(res)
+        console.log(res.tapIndex)
+        switch(res.tapIndex){
+          case 0:break;
+          case 1:break;
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(){
+    return{
+      title: "master-lu",
+      path: "/pages/about/about",
+      imageUrl:"http://s11.mogucdn.com/mlcdn/c45406/171008_28ba9aade1cc95bjh1cfbb11c0ehi_640x960.jpg"
+    }
+    
   }
 })

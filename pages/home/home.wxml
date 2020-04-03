@@ -1,3 +1,25 @@
 <!--pages/home/home.wxml-->
 <text>Hello World</text>
 <button size="mini" class="button01">按钮</button>
+<!-- 1.Toast -->
+<view>
+  <button size="mini" bind:tap="handleShowToast">showToast</button>
+</view>
+<!-- 2.Modal -->
+<view>
+  <button size="mini" bind:tap="handleShowModal">showModal</button>
+</view>
+<!-- 3.Loading -->
+<view>
+  <button size="mini" bind:tap="handleShowLoading">showLoading</button>
+</view>
+<!-- 4.actionSheet -->
+<view>
+  <button size="mini" bind:tap="handleShowAction">showAction</button>
+</view>
+<!-- 5.分享按钮 -->
+<view>
+  <button size="mini" open-type="share">分享</button>
+</view>
+
+
